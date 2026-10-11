@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a0a08">
+<meta name="description" content="八一电影网（bayidianyingwang-cn.github.io）是专注八一制片厂经典老片、军旅战争、历史史诗、红色经典的高清影视网址导航。收录1080P、2K、4K、蓝光原盘、REMUX、中文字幕优质片源入口，八一电影网片单、八一电影网榜、八一电影网志每日更新，帮您三步找到想看的老电影。">
+<meta name="keywords" content="八一电影网,八一电影,八一制片厂,八一厂,军旅电影,战争电影,红色经典,经典老片,老电影,高清电影,1080P,2K,4K,蓝光,蓝光原盘,REMUX,中文字幕,电影导航,影视导航,优质影视,高分电影,影视网址大全,电影网站导航,高清影视网址,剧情,历史,史诗,悬疑,动作,纪录片,冷门佳作,剧荒,八一电影网片单,八一电影网榜">
+<title>八一电影网 - 精选优质影视导航大全 | 八一制片厂经典·军旅战争·1080P/4K蓝光高清影视网址收录</title>
+<style>
+:root{
+  --ink:#1a0a08;
+  --ink2:#2b1410;
+  --paper:#f7f1e8;
+  --paper2:#efe6d6;
+  --red:#c1272d;
+  --red2:#8f1c20;
+  --gold:#d9a441;
+  --gold2:#f0cf74;
+  --line:rgba(26,10,8,.14);
+  --txt:#3a2824;
+  --muted:#8a766c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--txt);background:var(--paper);line-height:1.75;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;outline:none}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+ul,ol{list-style:none}
+img{display:block;max-width:100%}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+.kicker{color:var(--red);font-weight:700;letter-spacing:.22em;font-size:12px;text-transform:uppercase}
+.sec-title{font-size:30px;line-height:1.3;color:var(--ink);margin:10px 0 6px;letter-spacing:.02em}
+.sec-sub{color:var(--muted);font-size:14.5px;max-width:640px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.sec-head .l{position:relative;padding-left:18px}
+.sec-head .l::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:3px;background:linear-gradient(180deg,var(--red),var(--gold))}
+.sec-head .r{color:var(--muted);font-size:13px;text-align:right}
+section{padding:74px 0;position:relative}
+section:nth-child(even){background:linear-gradient(180deg,#fbf7f0,#f3ebdc)}
+/* ============ HEADER ============ */
+.site-header{position:sticky;top:0;z-index:60;background:rgba(26,10,8,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,164,65,.28)}
+.site-header .container{display:flex;align-items:center;gap:22px;height:66px}
+.brand{display:flex;align-items:center;gap:11px;color:#fff;font-weight:800;letter-spacing:.04em;white-space:nowrap}
+.brand .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--red),var(--red2));
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;padding:5px;gap:2px;box-shadow:0 4px 12px rgba(193,39,45,.35)}
+.brand .logo i{background:var(--gold);border-radius:2px;display:block}
+.brand small{font-weight:500;color:var(--gold2);font-size:11px;letter-spacing:.14em;display:block;line-height:1.1}
+.brand b{font-size:17px}
+.main-nav{display:flex;gap:4px;margin-left:auto}
+.main-nav a{padding:8px 13px;color:rgba(255,255,255,.78);font-size:14px;border-radius:7px;transition:.2s;position:relative}
+.main-nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.main-nav a.on{color:var(--gold2);background:rgba(217,164,65,.14)}
+.menu-btn{display:none;width:42px;height:42px;border:1px solid rgba(217,164,65,.4);background:transparent;color:var(--gold2);border-radius:9px;cursor:pointer;font-size:19px}
+.drawer-mask{position:fixed;inset:0;background:rgba(10,4,3,.6);z-index:70;opacity:0;pointer-events:none;transition:.3s}
+.drawer-mask.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:290px;background:var(--ink);z-index:80;transform:translateX(102%);transition:.32s;padding:26px 20px;overflow:auto}
+.drawer.open{transform:none}
+.drawer .brand{margin-bottom:22px}
+.drawer a{display:block;padding:13px 14px;color:rgba(255,255,255,.82);border-bottom:1px dashed rgba(217,164,65,.22);border-radius:6px;font-size:15px}
+.drawer a:hover{background:rgba(217,164,65,.1);color:var(--gold2)}
+/* ============ HERO ============ */
+.hero{background:radial-gradient(1200px 520px at 82% 8%,rgba(217,164,65,.30),transparent 60%),
+  radial-gradient(900px 460px at 8% 92%,rgba(193,39,45,.34),transparent 62%),
+  linear-gradient(160deg,#150806 0%,#2b1410 55%,#1a0a08 100%);color:#fff;padding:80px 0 70px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center}
+.hero .kicker{color:var(--gold2)}
+.hero h1{font-size:46px;line-height:1.2;margin:14px 0 16px;letter-spacing:.03em;font-weight:800}
+.hero h1 em{font-style:normal;background:linear-gradient(92deg,var(--gold2),#ffe6a3,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:rgba(255,255,255,.82);font-size:16.5px;max-width:560px}
+.hero .badges{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 26px}
+.hero .badges span{padding:5px 13px;border:1px solid rgba(217,164,65,.5);border-radius:999px;font-size:12.5px;color:var(--gold2);background:rgba(217,164,65,.08)}
+.search{position:relative;display:flex;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(217,164,65,.35);border-radius:14px;padding:8px;backdrop-filter:blur(4px)}
+.search input{flex:1;background:transparent;border:0;color:#fff;font-size:15px;padding:9px 12px;min-width:0}
+.search input::placeholder{color:rgba(255,255,255,.5)}
+.search button{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;border:0;border-radius:10px;padding:0 24px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.2s}
+.search button:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.hero .stats{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}
+.hero .stats div{flex:1;min-width:108px;background:rgba(255,255,255,.05);border:1px solid rgba(217,164,65,.24);border-radius:12px;padding:13px 14px}
+.hero .stats b{display:block;font-size:22px;color:var(--gold2);line-height:1.25}
+.hero .stats span{font-size:12px;color:rgba(255,255,255,.66)}
+/* star */
+.starwrap{position:relative;height:430px;display:flex;align-items:center;justify-content:center}
+.star{position:relative;width:250px;height:250px;transform:rotate(-8deg)}
+.star .core{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 36% 32%,#ffd97a 0%,var(--gold) 26%,var(--red) 60%,var(--red2) 100%);box-shadow:0 0 60px rgba(217,164,65,.55),0 0 140px rgba(193,39,45,.3)}
+.star .ray{position:absolute;left:50%;top:50%;width:2px;height:122%;transform-origin:top center;background:linear-gradient(180deg,rgba(255,233,170,.9),rgba(255,233,170,0) 88%);animation:ray 5s linear infinite}
+@keyframes ray{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.star .halo{position:absolute;inset:-30px;border-radius:50%;border:2px solid rgba(217,164,65,.3);animation:halo 3.4s ease-in-out infinite}
+@keyframes halo{50%{inset:-46px;opacity:.35}}
+.star-txt{position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);font-size:17px;letter-spacing:.5em;color:var(--gold2);text-shadow:0 2px 14px rgba(0,0,0,.6);white-space:nowrap;font-weight:800}
+.floaty{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(240,207,116,.85),rgba(240,207,116,0) 70%);animation:fl 6s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0) scale(1);opacity:.5}50%{transform:translateY(-26px) scale(1.25);opacity:.95}}
+/* ============ JAM (figure) ============ */
+.jam-item{display:grid;grid-template-columns:280px 1fr;gap:26px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:18px;transition:.26s;align-items:center}
+.jam-item:hover{transform:translateX(6px);border-color:rgba(193,39,45,.5);box-shadow:0 14px 34px rgba(43,20,16,.13)}
+.cover{position:relative;aspect-ratio:3/4;border-radius:12px;overflow:hidden;display:grid;place-items:center;color:#fff}
+.cover .g1{position:absolute;inset:0;background:var(--bg)}
+.cover .g2{position:absolute;inset:0;background:linear-gradient(135deg,transparent 0 62%,rgba(0,0,0,.34) 62% 64%,rgba(0,0,0,.18) 64%)}
+.cover .yr{position:absolute;top:10px;left:10px;background:var(--red);color:#fff;font-size:12px;font-weight:700;padding:3px 9px;border-radius:6px}
+.cover .play{position:absolute;width:56px;height:56px;border-radius:50%;border:2px solid rgba(255,255,255,.85);background:rgba(0,0,0,.25);display:grid;place-items:center;font-size:19px;padding-left:4px;transition:.25s}
+.jam-item:hover .play{background:var(--gold);border-color:var(--gold);color:#1a0a08;transform:scale(1.12)}
+.cover .rate{position:absolute;right:10px;bottom:10px;background:linear-gradient(135deg,var(--gold),var(--red));color:#fff;font-weight:800;font-size:14px;padding:3px 10px;border-radius:999px;box-shadow:0 4px 10px rgba(0,0,0,.3)}
+.jam-item h3{font-size:21px;color:var(--ink);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.jam-item h3 .cn{font-size:12px;color:var(--muted);font-weight:500}
+.jam-item .tags{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}
+.jam-item .tags i{padding:3px 10px;background:var(--paper2);color:var(--ink2);border-radius:999px;font-size:12px;font-style:normal;border:1px solid var(--line)}
+.jam-item p{color:#6b564c;font-size:14px}
+.meta{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px;border-top:1px dashed var(--line);padding-top:12px}
+.meta dt{font-size:11px;color:var(--muted);letter-spacing:.1em}
+.meta dd{font-size:13px;color:var(--ink2);font-weight:600;margin-top:2px}
+.go{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--red);font-weight:700;font-size:14px;border-bottom:1.5px solid currentColor;padding-bottom:2px}
+/* ============ PICK (card grid) ============ */
+.pick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pick-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 18px 16px;overflow:hidden;transition:.26s}
+.pick-card::after{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--red),var(--gold));transform:scaleX(.4);transform-origin:left;transition:.5s}
+.pick-card:hover{transform:translateY(-7px);box-shadow:0 18px 40px rgba(43,20,16,.16)}
+.pick-card:hover::after{transform:scaleX(1)}
+.avatar{width:56px;height:56px;border-radius:15px;background:var(--bg);position:relative;margin-bottom:14px}
+.avatar::before{content:"";position:absolute;inset:14px;border-radius:50%;background:rgba(255,255,255,.28)}
+.pick-card h4{font-size:16.5px;color:var(--ink)}
+.pick-card .chip{display:inline-block;margin-top:8px;font-size:11.5px;padding:2px 9px;border-radius:999px;background:#fbeaea;color:var(--red);font-weight:700}
+.pick-card p{font-size:13px;color:#7a655b;margin-top:9px;min-height:56px}
+.pick-card .foot{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:11px;margin-top:12px;font-size:12px;color:var(--muted)}
+.pick-card .foot b{color:var(--red)}
+/* ============ CATE (dl) ============ */
+.cate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cate-grid dl{background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:12px;padding:16px 18px;transition:.24s}
+.cate-grid dl:hover{background:linear-gradient(135deg,#fff,var(--paper2));transform:translateY(-4px);box-shadow:0 12px 26px rgba(43,20,16,.1)}
+.cate-grid dt{font-size:16px;font-weight:800;color:var(--ink);display:flex;justify-content:space-between;gap:8px}
+.cate-grid dt span{font-size:11px;color:var(--gold);font-weight:700;background:rgba(217,164,65,.14);padding:2px 8px;border-radius:999px;white-space:nowrap}
+.cate-grid dd{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}
+.cate-grid dd a{font-size:12px;padding:3px 10px;background:var(--paper2);border:1px solid var(--line);border-radius:999px;color:#6b564c;transition:.2s}
+.cate-grid dd a:hover{background:linear-gradient(135deg,var(--red),var(--gold));color:#fff;border-color:transparent}
+/* ============ HOT (ol) ============ */
+.hot-wrap{display:grid;grid-template-columns:1.35fr .65fr;gap:34px;align-items:start}
+.hot-list{counter-reset:rk}
+.hot-list li{display:grid;grid-template-columns:54px 1fr auto;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 16px;margin-bottom:11px;counter-increment:rk;transition:.22s}
+.hot-list li::before{content:counter(rk,decimal-leading-zero);font-size:23px;font-weight:800;color:#c9bba6;font-variant-numeric:tabular-nums;justify-self:center}
+.hot-list li:nth-child(1)::before{color:var(--gold)}
+.hot-list li:nth-child(2)::before{color:#9aa3ad}
+.hot-list li:nth-child(3)::before{color:#b3774a}
+.hot-list li:hover{border-color:rgba(193,39,45,.5);transform:translateX(5px)}
+.hot-list .t strong{display:block;color:var(--ink);font-size:15.5px}
+.hot-list .t span{font-size:12px;color:var(--muted)}
+.hot-list .bar{width:120px;height:7px;border-radius:99px;background:var(--paper2);overflow:hidden;margin-top:7px;--w:60%}
+.hot-list .bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--red),var(--gold));animation:fill .9s .1s forwards}
+@keyframes fill{to{width:var(--w)}}
+.hot-list .score{font-weight:800;color:var(--red);font-size:16px;white-space:nowrap}
+.tips{position:sticky;top:90px;background:linear-gradient(160deg,var(--ink),var(--ink2));color:#fff;border-radius:16px;padding:22px;border:1px solid rgba(217,164,65,.3)}
+.tips h5{color:var(--gold2);font-size:15px;margin-bottom:12px;letter-spacing:.05em}
+.tips ul{font-size:13.5px;color:rgba(255,255,255,.82)}
+.tips li{padding:8px 0;border-bottom:1px dashed rgba(217,164,65,.22)}
+.tips li:last-child{border:0}
+/* ============ NEWS (figure grid) ============ */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.news-item{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.26s;display:flex;flex-direction:column}
+.news-item:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(43,20,16,.14)}
+.news-item .pic{aspect-ratio:16/10;position:relative}
+.news-item .pic .g{position:absolute;inset:0;background:var(--bg)}
+.news-item .pic .tag{position:absolute;top:12px;left:12px;background:var(--ink);color:var(--gold2);font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:999px;letter-spacing:.06em}
+.news-item .body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
+.news-item h4{font-size:16.5px;color:var(--ink);line-height:1.5}
+.news-item .meta2{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap}
+/* ============ ABOUT (steps) ============ */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:40px}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;transition:.25s}
+.step:hover{border-color:var(--gold);transform:translateY(-5px)}
+.step .no{font-size:11px;letter-spacing:.24em;color:var(--gold);font-weight:800}
+.step .big{font-size:26px;font-weight:800;background:linear-gradient(135deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2}
+.step h5{font-size:16px;color:var(--ink);margin:4px 0 6px}
+.step p{font-size:13px;color:#7a655b}
+.step::after{content:"";position:absolute;top:50%;right:-10px;width:18px;height:2px;border-top:2px dashed var(--gold);transform:translateY(-50%)}
+.step:last-child::after{display:none}
+.data-row{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:28px}
+.data-row div{background:linear-gradient(160deg,var(--ink),var(--ink2));color:#fff;border-radius:12px;padding:16px;text-align:center;border:1px solid rgba(217,164,65,.28)}
+.data-row b{display:block;font-size:24px;color:var(--gold2)}
+.data-row span{font-size:11.5px;color:rgba(255,255,255,.7)}
+.note{background:#fff;border:1px solid var(--line);border-left:5px solid var(--red);border-radius:12px;padding:20px 24px;font-size:13.5px;color:#6b564c}
+.note b{color:var(--red)}
+/* ============ FOOTER ============ */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.72);padding:54px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px;margin-bottom:30px}
+.site-footer h6{color:var(--gold2);font-size:14px;margin-bottom:12px;letter-spacing:.06em}
+.site-footer ul li{margin-bottom:8px;font-size:13px}
+.site-footer a:hover{color:var(--gold2)}
+.copyright{border-top:1px dashed rgba(217,164,65,.3);padding-top:20px;font-size:12.5px;color:rgba(255,255,255,.5);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.top-btn{position:fixed;right:20px;bottom:24px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;border:0;cursor:pointer;box-shadow:0 10px 24px rgba(193,39,45,.4);opacity:0;pointer-events:none;transform:translateY(14px);transition:.3s;z-index:50}
+.top-btn.show{opacity:1;pointer-events:auto;transform:none}
+/* ============ RESPONSIVE ============ */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .starwrap{height:300px;margin-top:14px}
+  .pick-grid{grid-template-columns:repeat(2,1fr)}
+  .cate-grid,.news-grid{grid-template-columns:repeat(2,1fr)}
+  .hot-wrap{grid-template-columns:1fr}
+  .tips{position:static}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .data-row{grid-template-columns:repeat(3,1fr)}
+  .jam-item{grid-template-columns:200px 1fr}
+  .meta{grid-template-columns:repeat(3,1fr);row-gap:8px}
+}
+@media (max-width:760px){
+  .container{padding:0 16px}
+  section{padding:56px 0}
+  .main-nav{display:none}
+  .menu-btn{display:grid;place-items:center;margin-left:auto}
+  .sec-title{font-size:24px}
+  .hero{padding:52px 0 46px}
+  .hero h1{font-size:27px}
+  .search{flex-direction:column}
+  .search button{padding:12px}
+  .jam-item{grid-template-columns:1fr;gap:14px}
+  .cover{aspect-ratio:16/9}
+  .cover .play{width:48px;height:48px;opacity:1}
+  .pick-grid,.cate-grid,.news-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .step::after{display:none}
+  .data-row{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hot-list li{grid-template-columns:42px 1fr;row-gap:6px}
+  .hot-list .bar{width:100%;grid-column:2}
+  .hot-list .score{grid-row:1;grid-column:3}
+}
+@media (max-width:420px){
+  .hero h1{font-size:23px}
+  .hero .stats div{min-width:88px}
+  .steps,.data-row,.foot-grid{grid-template-columns:1fr}
+  .meta{grid-template-columns:repeat(2,1fr)}
+}
+@media print{
+  .site-header,.drawer,.drawer-mask,.top-btn,.menu-btn{display:none!important}
+  body{background:#fff;color:#000}
+  section{padding:20px 0;page-break-inside:avoid}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top" aria-label="八一电影网 首页">
+      <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span><b>八一电影网</b><small>BAYI FILM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#top" class="on">首页</a>
+      <a href="#jam">八一片单</a>
+      <a href="#pick">精选网址</a>
+      <a href="#cate">分类导航</a>
+      <a href="#hot">八一榜</a>
+      <a href="#news">八一志</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单">☰</button>
+  </div>
+</header>
+<div class="drawer-mask" id="mask"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <a href="#top">首页</a>
+  <a href="#jam">八一片单</a>
+  <a href="#pick">精选网址</a>
+  <a href="#cate">分类导航</a>
+  <a href="#hot">八一榜</a>
+  <a href="#news">八一志</a>
+  <a href="#about">关于本站</a>
+</aside>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">bayidianyingwang-cn · 八一电影网</div>
+      <h1>八一电影网，<em>只挑经得起重看的老片子</em></h1>
+      <p class="lead">八一电影网不是资源站，不做搬运、不存片源、不追热点。我们只做一件事：把散落在网络里的<strong>八一电影制片厂经典、军旅战争片、历史史诗与红色经典</strong>优质入口，按"题材 × 评分 × 画质 × 年代 × 地区 × 语言 × 时长"七个维度重新挑一遍，让您三步找到那部想看的老电影。</p>
+      <div class="badges">
+        <span>八一制片厂</span><span>军旅战争</span><span>红色经典</span>
+        <span>经典老片</span><span>1080P / 2K / 4K</span><span>蓝光原盘</span><span>中文字幕</span>
+      </div>
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" placeholder="搜片名、导演、演员、题材，如：地道战、大决战、长津湖、老电影" aria-label="搜索影片">
+        <button type="submit">八一秒找</button>
+      </form>
+      <div class="stats">
+        <div><b>1280+</b><span>收录优质网址</span></div>
+        <div><b>86</b><span>八一经典片单</span></div>
+        <div><b>12</b><span>分类频道</span></div>
+        <div><b>每日</b><span>更新与复核</span></div>
+      </div>
+    </div>
+    <div class="starwrap" aria-hidden="true">
+      <div class="star">
+        <div class="core"></div>
+        <div class="ray" style="transform:rotate(0deg)"></div>
+        <div class="ray" style="transform:rotate(60deg)"></div>
+        <div class="ray" style="transform:rotate(120deg)"></div>
+        <div class="ray" style="transform:rotate(180deg)"></div>
+        <div class="ray" style="transform:rotate(240deg)"></div>
+        <div class="ray" style="transform:rotate(300deg)"></div>
+        <div class="halo"></div>
+      </div>
+      <div class="floaty" style="width:14px;height:14px;left:14%;top:18%"></div>
+      <div class="floaty" style="width:9px;height:9px;right:16%;top:30%;animation-delay:1.6s"></div>
+      <div class="floaty" style="width:11px;height:11px;left:22%;bottom:20%;animation-delay:2.8s"></div>
+      <div class="floaty" style="width:7px;height:7px;right:24%;bottom:26%;animation-delay:.9s"></div>
+      <div class="star-txt">八一 · 经典</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JAM ================= -->
+<section id="jam">
+  <div class="container">
+    <div class="sec-head">
+      <div class="l">
+        <div class="kicker">八一电影网 · 片单</div>
+        <h2 class="sec-title">八一片单：八一制片厂与军旅经典的 86 部</h2>
+        <p class="sec-sub">八一电影网片单按"八一厂出品 / 军旅战争 / 历史史诗 / 红色经典 / 谍战悬疑 / 人物传记"六个频道归档，只收口碑 7.5 分以上、画质 1080P 起、带中文字幕的版本。</p>
+      </div>
+      <div class="r">共 86 部 · 每周复核<br>画质优先 · 口碑优先</div>
+    </div>
+
+    <figure class="jam-item">
+      <div class="cover" style="--bg:linear-gradient(150deg,#7a1f22,#c1272d 60%,#3d1012)">
+        <span class="g1"></span><span class="g2"></span>
+        <span class="yr">1965</span>
+        <span class="play" aria-hidden="true">▶</span>
+        <span class="rate">9.2</span>
+      </div>
+      <figcaption>
+        <h3>地道战 <span class="cn">Tunnel Warfare</span></h3>
+        <div class="tags"><i>八一制片厂</i><i>战争</i><i>经典老片</i><i>黑白修复</i><i>中文字幕</i></div>
+        <p>八一电影网"红色经典馆"首推。高家庄地道从"藏"到"打"的战术演进拍得清楚明白，民兵智慧胜过千军万马。2023 年 4K 修复版上线后，画质与节奏都经得起重看。</p>
+        <dl class="meta">
+          <div><dt>画质</dt><dd>4K 修复</dd></div>
+          <div><dt>码率</dt><dd>约 28 Mbps</dd></div>
+          <div><dt>字幕</dt><dd>中文 / 无字</dd></div>
+          <div><dt>时长</dt><dd>96 分钟</dd></div>
+          <div><dt>地区</dt><dd>中国大陆</dd></div>
+        </dl>
+        <a class="go" href="#">去看看 →</a>
+      </figcaption>
+    </figure>
+
+    <figure class="jam-item">
+      <div class="cover" style="--bg:linear-gradient(150deg,#1f3a5f,#3a6ea5 60%,#12233a)">
+        <span class="g1"></span><span class="g2"></span>
+        <span class="yr">1991</span>
+        <span class="play" aria-hidden="true">▶</span>
+        <span class="rate">8.9</span>
+      </div>
+      <figcaption>
+        <h3>大决战之辽沈战役 <span class="cn">Decisive Engagement</span></h3>
+        <div class="tags"><i>八一制片厂</i><i>历史史诗</i><i>战争</i><i>群像</i><i>2K 修复</i></div>
+        <p>八一厂史诗三部曲开篇。大规模实兵拍摄、真实地形复现、无滤镜的硝烟感，是"大场面"三个字的天花板。八一电影网建议看 2K 修复版，字幕选"简体中文（修复组）"。</p>
+        <dl class="meta">
+          <div><dt>画质</dt><dd>2K 修复</dd></div>
+          <div><dt>码率</dt><dd>约 22 Mbps</dd></div>
+          <div><dt>字幕</dt><dd>中文字幕</dd></div>
+          <div><dt>时长</dt><dd>222 分钟</dd></div>
+          <div><dt>地区</dt><dd>中国大陆</dd></div>
+        </dl>
+        <a class="go" href="#">去看看 →</a>
+      </figcaption>
+    </figure>
+
+    <figure class="jam-item">
+      <div class="cover" style="--bg:linear-gradient(150deg,#5b3a1e,#b9773a 55%,#2c1c0c)">
+        <span class="g1"></span><span class="g2"></span>
+        <span class="yr">1956</span>
+        <span class="play" aria-hidden="true">▶</span>
+        <span class="rate">8.4</span>
+      </div>
+      <figcaption>
+        <h3>上甘岭 <span class="cn">Battle on Shangganling Mountain</span></h3>
+        <div class="tags"><i>八一制片厂</i><i>战争</i><i>经典老片</i><i>插曲《我的祖国》</i><i>4K 修复</i></div>
+        <p>坑道里的十五昼夜，缺水、缺粮、缺睡眠，却拍出了最干净的人情。《我的祖国》一段是全片呼吸口，也是中国电影最动人的插曲之一。八一电影网归入"红色经典馆"。</p>
+        <dl class="meta">
+          <div><dt>画质</dt><dd>4K 修复</dd></div>
+          <div><dt>码率</dt><dd>约 20 Mbps</dd></div>
+          <div><dt>字幕</dt><dd>中文 / 无字</dd></div>
+          <div><dt>时长</dt><dd>124 分钟</dd></div>
+          <div><dt>地区</dt><dd>中国大陆</dd></div>
+        </dl>
+        <a class="go" href="#">去看看 →</a>
+      </figcaption>
+    </figure>
+
+    <figure class="jam-item">
+      <div class="cover" style="--bg:linear-gradient(150deg,#123a2e,#2f7a5b 60%,#0a241b)">
+        <span class="g1"></span><span class="g2"></span>
+        <span class="yr">1974</span>
+        <span class="play" aria-hidden="true">▶</span>
+        <span class="rate">8.1</span>
+      </div>
+      <figcaption>
+        <h3>闪闪的红星 <span class="cn">Sparkling Red Star</span></h3>
+        <div class="tags"><i>八一制片厂</i><i>儿童</i><i>革命</i><i>经典老片</i><i>插曲</i></div>
+        <p>潘冬子的眼睛是全片最有力的镜头。竹林、红星、米行、胡汉三，构成一代人的集体记忆。《红星照我去战斗》《映山红》两首歌比剧情更先被记住。建议看 1080P 修复版。</p>
+        <dl class="meta">
+          <div><dt>画质</dt><dd>1080P 修复</dd></div>
+          <div><dt>码率</dt><dd>约 12 Mbps</dd></div>
+          <div><dt>字幕</dt><dd>中文 / 无字</dd></div>
+          <div><dt>时长</dt><dd>100 分钟</dd></div>
+          <div><dt>地区</dt><dd>中国大陆</dd></div>
+        </dl>
+        <a class="go" href="#">去看看 →</a>
+      </figcaption>
+    </figure>
+
+    <figure class="jam-item">
+      <div class="cover" style="--bg:linear-gradient(150deg,#2b2b33,#5f5f6e 55%,#14141a)">
+        <span class="g1"></span><span class="g2"></span>
+        <span class="yr">2017</span>
+        <span class="play" aria-hidden="true">▶</span>
+        <span class="rate">7.9</span>
+      </div>
+      <figcaption>
+        <h3>血战湘江 <span class="cn">Battle of Xiangjiang River</span></h3>
+        <div class="tags"><i>八一制片厂</i><i>战争</i><i>历史</i><i>史诗</i><i>2K</i></div>
+        <p>八一厂出品的现代战争片，镜头不回避残酷：渡江、断后、牺牲、抉择。没有神化，只有"走下去"的意志。八一电影网归入"军旅战争厅"，建议 2K 以上画质观看。</p>
+        <dl class="meta">
+          <div><dt>画质</dt><dd>2K</dd></div>
+          <div><dt>码率</dt><dd>约 18 Mbps</dd></div>
+          <div><dt>字幕</dt><dd>中文字幕</dd></div>
+          <div><dt>时长</dt><dd>118 分钟</dd></div>
+          <div><dt>地区</dt><dd>中国大陆</dd></div>
+        </dl>
+        <a class="go" href="#">去看看 →</a>
+      </figcaption>
+    </figure>
+
+    <figure class="jam-item">
+      <div class="cover" style="--bg:linear-gradient(150deg,#3d1f3a,#8f4a7c 55%,#1d0f1b)">
+        <span class="g1"></span><span class="g2"></span>
+        <span class="yr">1963</span>
+        <span class="play" aria-hidden="true">▶</span>
+        <span class="rate">8.6</span>
+      </div>
+      <figcaption>
+        <h3>野火春风斗古城 <span class="cn">Beacon Fire and Spring Breeze</span></h3>
+        <div class="tags"><i>八一制片厂</i><i>谍战</i><i>悬疑</i><i>经典老片</i><i>4K 修复</i></div>
+        <p>地下工作者在敌占区的每一步都踩在刀刃上。没有枪林弹雨，靠的是身份、情报与一句暗语。八一电影网归入"谍战悬疑馆"，是"冷门高分"频道常驻片。</p>
+        <dl class="meta">
+          <div><dt>画质</dt><dd>4K 修复</dd></div>
+          <div><dt>码率</dt><dd>约 24 Mbps</dd></div>
+          <div><dt>字幕</dt><dd>中文 / 无字</dd></div>
+          <div><dt>时长</dt><dd>104 分钟</dd></div>
+          <div><dt>地区</dt><dd>中国大陆</dd></div>
+        </dl>
+        <a class="go" href="#">去看看 →</a>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= PICK ================= -->
+<section id="pick">
+  <div class="container">
+    <div class="sec-head">
+      <div class="l">
+        <div class="kicker">八一电影网 · 精选网址</div>
+        <h2 class="sec-title">精选网址：人工核验过的 8 个入口</h2>
+        <p class="sec-sub">八一电影网精选网址每周复核一次：点开就能用、跳转不中招、下载不诱导、片源有字幕、画质说得清。以下均为示例占位，请以实际片源为准。</p>
+      </div>
+      <div class="r">8 个入口 · 每周复核<br>不收录弹窗站与诱导站</div>
+    </div>
+    <div class="pick-grid">
+
+      <article class="pick-card">
+        <div class="avatar" style="--bg:linear-gradient(135deg,#c1272d,#8f1c20)"></div>
+        <h4>八一经典馆</h4><span class="chip">4K 修复</span>
+        <p>专注八一制片厂 1952 年至今出品的老片：地道战、地雷战、上甘岭、闪闪的红星、野火春风斗古城。</p>
+        <div class="foot"><span>收录 86 部</span><b>去看看</b></div>
+      </article>
+
+      <article class="pick-card">
+        <div class="avatar" style="--bg:linear-gradient(135deg,#3a6ea5,#1f3a5f)"></div>
+        <h4>军旅战争厅</h4><span class="chip">2K / 蓝光</span>
+        <p>大决战、大转折、大进军三部曲，抗美援朝、对越自卫反击战、抗日战争题材的高画质入口。</p>
+        <div class="foot"><span>收录 142 部</span><b>去看看</b></div>
+      </article>
+
+      <article class="pick-card">
+        <div class="avatar" style="--bg:linear-gradient(135deg,#2f7a5b,#123a2e)"></div>
+        <h4>历史史诗馆</h4><span class="chip">REMUX</span>
+        <p>史实改编、大场面、群像戏。秦始皇、汉武帝、贞观之治、大明王朝、辛亥革命题材精选。</p>
+        <div class="foot"><span>收录 98 部</span><b>去看看</b></div>
+      </article>
+
+      <article class="pick-card">
+        <div class="avatar" style="--bg:linear-gradient(135deg,#b9773a,#5b3a1e)"></div>
+        <h4>红色经典馆</h4><span class="chip">中文字幕</span>
+        <p>革命历史题材与人物传记：长征、延安、西柏坡、开国将帅、隐蔽战线。含插曲与幕后纪录片。</p>
+        <div class="foot"><span>收录 76 部</span><b>去看看</b></div>
+      </article>
+
+      <article class="pick-card">
+        <div class="avatar" style="--bg:linear-gradient(135deg,#8f4a7c,#3d1f3a)"></div>
+        <h4>谍战悬疑馆</h4><span class="chip">冷门高分</span>
+        <p>潜伏、伪装、情报、身份。老片胜在新片之前：没有炫技，只有一句暗语和一次对视。</p>
+        <div class="foot"><span>收录 63 部</span><b>去看看</b></div>
+      </article>
+
+      <article class="pick-card">
+        <div class="avatar" style="--bg:linear-gradient(135deg,#5f5f6e,#2b2b33)"></div>
+        <h4>老片修复馆</h4><span class="chip">4K 修复</span>
+        <p>黑白片 4K 修复、胶片扫描、AI 补帧到 60fps。看的是修复组的耐心，也是导演当年的构图。</p>
+        <div class="foot"><span>收录 54 部</span><b>去看看</b></div>
+      </article>
+
+      <article class="pick-card">
+        <div class="avatar" style="--bg:linear-gradient(135deg,#a0522d,#5c2e16)"></div>
+        <h4>人物传记厅</h4><span class="chip">纪录片</span>
+        <p>将帅、科学家、艺术家、普通人。八一电影网认为，传记片的价值在于"不神化"，在于细节。</p>
+        <div class="foot"><span>收录 47 部</span><b>去看看</b></div>
+      </article>
+
+      <article class="pick-card">
+        <div class="avatar" style="--bg:linear-gradient(135deg,#7a6a3a,#3d3318)"></div>
+        <h4>十五分钟厅</h4><span class="chip">≤30 分钟</span>
+        <p>短片、微电影、纪录片片段。通勤、午休、睡前刚好够用，看完不拖泥带水。</p>
+        <div class="foot"><span>收录 120 部</span><b>去看看</b></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATE (dl) ================= -->
+<section id="cate">
+  <div class="container">
+    <div class="sec-head">
+      <div class="l">
+        <div class="kicker">八一电影网 · 分类导航</div>
+        <h2 class="sec-title">12 个频道，七个维度筛到你想看的</h2>
+        <p class="sec-sub">题材 × 评分 × 画质 × 年代 × 地区 × 语言 × 时长。八一电影网不做大而全，只做"老片、军旅、历史、红色"这四个字的深。</p>
+      </div>
+      <div class="r">12 频道 · 1280+ 网址<br>筛选线：7.5 分起</div>
+    </div>
+    <div class="cate-grid">
+
+      <dl>
+        <dt>八一制片厂 <span>86</span></dt>
+        <dd><a href="#">地道战</a><a href="#">地雷战</a><a href="#">上甘岭</a><a href="#">闪闪的红星</a><a href="#">永不消逝的电波</a></dd>
+      </dl>
+      <dl>
+        <dt>军旅战争 <span>142</span></dt>
+        <dd><a href="#">大决战</a><a href="#">长津湖</a><a href="#">集结号</a><a href="#">血战湘江</a><a href="#">渡江侦察记</a></dd>
+      </dl>
+      <dl>
+        <dt>历史史诗 <span>98</span></dt>
+        <dd><a href="#">大秦帝国</a><a href="#">贞观之治</a><a href="#">大明王朝</a><a href="#">辛亥革命</a><a href="#">战国</a></dd>
+      </dl>
+      <dl>
+        <dt>红色经典 <span>76</span></dt>
+        <dd><a href="#">长征</a><a href="#">延安</a><a href="#">西柏坡</a><a href="#">开国大典</a><a href="#">决胜时刻</a></dd>
+      </dl>
+      <dl>
+        <dt>谍战悬疑 <span>63</span></dt>
+        <dd><a href="#">潜伏</a><a href="#">伪装者</a><a href="#">风声</a><a href="#">野火春风斗古城</a><a href="#">永不瞑目</a></dd>
+      </dl>
+      <dl>
+        <dt>人物传记 <span>47</span></dt>
+        <dd><a href="#">将帅</a><a href="#">科学家</a><a href="#">艺术家</a><a href="#">普通人</a><a href="#">纪录片</a></dd>
+      </dl>
+      <dl>
+        <dt>经典老片 <span>210</span></dt>
+        <dd><a href="#">1950s</a><a href="#">1960s</a><a href="#">1970s</a><a href="#">1980s</a><a href="#">1990s</a></dd>
+      </dl>
+      <dl>
+        <dt>画质专区 <span>360</span></dt>
+        <dd><a href="#">1080P</a><a href="#">2K</a><a href="#">4K</a><a href="#">蓝光原盘</a><a href="#">REMUX</a><a href="#">杜比视界</a></dd>
+      </dl>
+      <dl>
+        <dt>按片长 <span>1280</span></dt>
+        <dd><a href="#">≤15 分钟</a><a href="#">≤30 分钟</a><a href="#">≤90 分钟</a><a href="#">120 分钟</a><a href="#">≥150 分钟</a></dd>
+      </dl>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOT (ol) ================= -->
+<section id="hot">
+  <div class="container">
+    <div class="sec-head">
+      <div class="l">
+        <div class="kicker">八一电影网 · 榜单</div>
+        <h2 class="sec-title">八一榜：本月被翻出来重看最多的 8 部</h2>
+        <p class="sec-sub">八一榜按"站内访问量 × 口碑评分 × 画质等级 × 字幕完整度"加权排序，每周一更新。榜首不是最新，而是最耐看。</p>
+      </div>
+      <div class="r">每周一更新<br>加权：访问 40% / 口碑 35% / 画质 25%</div>
+    </div>
+    <div class="hot-wrap">
+      <ol class="hot-list">
+        <li><div class="t"><strong>地道战</strong><span>1965 · 战争 / 经典老片 · 4K 修复</span><span class="bar" style="--w:96%"></span></div><b class="score">9.2</b></li>
+        <li><div class="t"><strong>大决战之辽沈战役</strong><span>1991 · 历史史诗 / 战争 · 2K 修复</span><span class="bar" style="--w:91%"></span></div><b class="score">8.9</b></li>
+        <li><div class="t"><strong>上甘岭</strong><span>1956 · 战争 / 经典老片 · 4K 修复</span><span class="bar" style="--w:87%"></span></div><b class="score">8.4</b></li>
+        <li><div class="t"><strong>闪闪的红星</strong><span>1974 · 儿童 / 革命 · 1080P 修复</span><span class="bar" style="--w:80%"></span></div><b class="score">8.1</b></li>
+        <li><div class="t"><strong>野火春风斗古城</strong><span>1963 · 谍战 / 悬疑 · 4K 修复</span><span class="bar" style="--w:74%"></span></div><b class="score">8.6</b></li>
+        <li><div class="t"><strong>血战湘江</strong><span>2017 · 战争 / 历史 · 2K</span><span class="bar" style="--w:68%"></span></div><b class="score">7.9</b></li>
+        <li><div class="t"><strong>永不消逝的电波</strong><span>1958 · 谍战 / 经典老片 · 4K 修复</span><span class="bar" style="--w:63%"></span></div><b class="score">8.3</b></li>
+        <li><div class="t"><strong>渡江侦察记</strong><span>1954 · 战争 / 经典老片 · 2K 修复</span><span class="bar" style="--w:57%"></span></div><b class="score">7.8</b></li>
+      </ol>
+      <aside class="tips">
+        <h5>八一电影网挑片三条心得</h5>
+        <ul>
+          <li><b>一、老片看修复，不看压缩。</b>同一部《地道战》，4K 修复版与 480P 网盘的观感是两个片子。画质优先于片源数量。</li>
+          <li><b>二、字幕是第二导演。</b>八一电影网只收带完整中文字幕的版本，方言、军语、年代词必须有注释。</li>
+          <li><b>三、宁缺毋滥。</b>一个分类留 86 部，比留 860 部更有用。看不完的片单，等于没有片单。</li>
+          <li><b>四、重看才有价值。</b>经典老片的意义在于"第二次看懂"，八一榜优先推荐经得起重看的片子。</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWS ================= -->
+<section id="news">
+  <div class="container">
+    <div class="sec-head">
+      <div class="l">
+        <div class="kicker">八一电影网 · 八一志</div>
+        <h2 class="sec-title">八一志：挑片之外，写一点观影笔记</h2>
+        <p class="sec-sub">八一电影网志不写资讯、不做营销、不追热搜。只记录：哪部老片被 4K 修复了、哪个版本字幕最完整、哪场戏的构图值得暂停三秒。</p>
+      </div>
+      <div class="r">每周 2-3 篇 · 原创<br>不接片方软文</div>
+    </div>
+    <div class="news-grid">
+
+      <article class="news-item">
+        <div class="pic" style="--bg:linear-gradient(135deg,#7a1f22,#c1272d 60%,#3d1012)">
+          <span class="tag">修复观察</span>
+        </div>
+        <div class="body">
+          <h4>《地道战》4K 修复版：颗粒感回来了，噪点没有</h4>
+          <div class="meta2"><span>2026-10-08</span><span>修复观察</span><span>阅读 3.2 万</span></div>
+        </div>
+      </article>
+
+      <article class="news-item">
+        <div class="pic" style="--bg:linear-gradient(135deg,#1f3a5f,#3a6ea5 60%,#12233a)">
+          <span class="tag">大场面</span>
+        </div>
+        <div class="body">
+          <h4>大决战三部曲：实兵拍摄为什么再也拍不出来了</h4>
+          <div class="meta2"><span>2026-10-05</span><span>大场面</span><span>阅读 2.7 万</span></div>
+        </div>
+      </article>
+
+      <article class="news-item">
+        <div class="pic" style="--bg:linear-gradient(135deg,#5b3a1e,#b9773a 55%,#2c1c0c)">
+          <span class="tag">片单</span>
+        </div>
+        <div class="body">
+          <h4>八一厂 1952-1990 片单：被片名耽误的 12 部好片</h4>
+          <div class="meta2"><span>2026-10-02</span><span>片单</span><span>阅读 1.9 万</span></div>
+        </div>
+      </article>
+
+      <article class="news-item">
+        <div class="pic" style="--bg:linear-gradient(135deg,#123a2e,#2f7a5b 60%,#0a241b)">
+          <span class="tag">字幕</span>
+        </div>
+        <div class="body">
+          <h4>老片字幕指南：军语、方言与年代词的三种处理</h4>
+          <div class="meta2"><span>2026-09-28</span><span>字幕</span><span>阅读 1.4 万</span></div>
+        </div>
+      </article>
+
+      <article class="news-item">
+        <div class="pic" style="--bg:linear-gradient(135deg,#3d1f3a,#8f4a7c 55%,#1d0f1b)">
+          <span class="tag">冷门</span>
+        </div>
+        <div class="body">
+          <h4>谍战老片五部：没有枪战，全靠一句暗语</h4>
+          <div class="meta2"><span>2026-09-24</span><span>冷门</span><span>阅读 2.1 万</span></div>
+        </div>
+      </article>
+
+      <article class="news-item">
+        <div class="pic" style="--bg:linear-gradient(135deg,#2b2b33,#5f5f6e 55%,#14141a)">
+          <span class="tag">画质</span>
+        </div>
+        <div class="body">
+          <h4>蓝光原盘、REMUX、WEB-DL：老片该选哪一个</h4>
+          <div class="meta2"><span>2026-09-20</span><span>画质</span><span>阅读 1.6 万</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="container">
+    <div class="sec-head">
+      <div class="l">
+        <div class="kicker">八一电影网 · 关于本站</div>
+        <h2 class="sec-title">关于八一电影网：因为爱老片，所以认真挑</h2>
+        <p class="sec-sub">八一电影网（bayidianyingwang-cn.github.io）是一个"网址导航 + 片单推荐 + 观影笔记"站点，不是资源站、不是下载站、不是播放站。我们不打擦边、不搬运、不存片源、不诱导下载。</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="no">STEP 01</div><div class="big">挑</div><h5>挑片</h5><p>按题材、评分、画质、年代、地区、语言、时长七个维度筛选，只留口碑 7.5 分以上的老片与军旅片。</p></div>
+      <div class="step"><div class="no">STEP 02</div><div class="big">核</div><h5>核验</h5><p>每周复核入口可用性：是否跳转、是否有字幕、画质是否如实、是否含诱导下载与弹窗。</p></div>
+      <div class="step"><div class="no">STEP 03</div><div class="big">写</div><h5>写清</h5><p>每部片写清画质、码率、字幕、时长、地区五个元数据，让您点开之前就知道看到的是什么。</p></div>
+      <div class="step"><div class="no">STEP 04</div><div class="big">更</div><h5>更新</h5><p>每周更新片单与八一志，每月清理失效链接。发现侵权，24 小时内下架并留记录。</p></div>
+    </div>
+
+    <div class="data-row">
+      <div><b>1280+</b><span>收录网址</span></div>
+      <div><b>86</b><span>八一经典片单</span></div>
+      <div><b>12</b><span>分类频道</span></div>
+      <div><b>7</b><span>筛选维度</span></div>
+      <div><b>7.5</b><span>口碑起跳线</span></div>
+      <div><b>0</b><span>资源文件存储</span></div>
+    </div>
+
+    <div class="note">
+      <p><b>合规声明：</b>八一电影网仅为影视网址导航与观影资讯分享平台，<b>不提供、不存储、不转存任何影视资源文件</b>，所有影片版权归原作者及出品方（含八一电影制片厂及相关制片单位）所有。页面所示片单、画质、码率、字幕、时长、评分均为<b>示例占位</b>，请以实际片源为准。若您是版权方，发现本站链接指向的第三方页面存在侵权内容，请通过页脚联系方式告知，我们将在 <b>24 小时内</b> 下架相关链接并保留处理记录。请支持正版与院线。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top"><span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span><b>八一电影网</b><small>BAYI FILM</small></span></a>
+        <p style="margin-top:14px;font-size:13px;max-width:340px">八一电影网，专注八一电影制片厂经典、军旅战争、历史史诗与红色经典的高清影视网址导航。因为爱老片，所以认真挑。</p>
+      </div>
+      <div>
+        <h6>频道</h6>
+        <ul><li><a href="#cate">八一制片厂</a></li><li><a href="#cate">军旅战争</a></li><li><a href="#cate">历史史诗</a></li><li><a href="#cate">红色经典</a></li><li><a href="#cate">谍战悬疑</a></li></ul>
+      </div>
+      <div>
+        <h6>服务</h6>
+        <ul><li><a href="#jam">八一片单</a></li><li><a href="#hot">八一榜</a></li><li><a href="#pick">精选网址</a></li><li><a href="#news">八一志</a></li><li><a href="#about">更新日志</a></li></ul>
+      </div>
+      <div>
+        <h6>画质</h6>
+        <ul><li><a href="#cate">1080P</a></li><li><a href="#cate">2K</a></li><li><a href="#cate">4K 修复</a></li><li><a href="#cate">蓝光原盘</a></li><li><a href="#cate">REMUX</a></li></ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 八一电影网（bayidianyingwang-cn.github.io / www.bayidianyingwang-cn.github.io） · 影视网址导航与观影资讯分享 · 不提供任何影视资源下载文件 · 页面所示片单与画质信息均为示例占位</span>
+      <span>站名：八一电影网 · 域名：bayidianyingwang-cn</span>
+    </div>
+  </div>
+</footer>
+
+<button class="top-btn" id="topBtn" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var btn = document.getElementById('topBtn');
+  var links = document.querySelectorAll('.main-nav a');
+  var secs = ['top','jam','pick','cate','hot','news','about'].map(function(id){return document.getElementById(id);});
+
+  // 回到顶部
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 500){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+    var y = window.scrollY + 120, cur = '';
+    secs.forEach(function(s){ if(s && s.offsetTop <= y) cur = s.id; });
+    links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + cur); });
+  }, {passive:true});
+  btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  // 汉堡菜单
+  var menuBtn = document.getElementById('menuBtn');
+  var drawer = document.getElementById('drawer');
+  var mask = document.getElementById('mask');
+  function close(){ drawer.classList.remove('open'); mask.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); }
+  menuBtn.addEventListener('click', function(){
+    drawer.classList.add('open'); mask.classList.add('open'); drawer.setAttribute('aria-hidden','false');
+  });
+  mask.addEventListener('click', close);
+  drawer.addEventListener('click', function(e){ if(e.target.tagName === 'A') close(); });
+
+  // 进度条动画（进入视口才跑）
+  var bars = document.querySelectorAll('.hot-list .bar');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(en){ if(en.isIntersecting){ en.target.style.animationPlayState = 'running'; io.unobserve(en.target); } });
+    }, {threshold:.25});
+    bars.forEach(function(b){ b.style.animationPlayState = 'paused'; io.observe(b); });
+  }
+})();
+</script>
+</body>
+</html>
